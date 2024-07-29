@@ -82,11 +82,11 @@ let MyComponent = class MyComponent {
         this.el = r.nativeElement;
     }
     static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.1.2", ngImport: i0, type: MyComponent, deps: [{ token: i0.ChangeDetectorRef }, { token: i0.ElementRef }, { token: i0.NgZone }], target: i0.ɵɵFactoryTarget.Component });
-    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.1.2", type: MyComponent, selector: "my-component", inputs: { first: "first", last: "last", middle: "middle" }, ngImport: i0, template: '<ng-content></ng-content>', isInline: true, changeDetection: i0.ChangeDetectionStrategy.OnPush });
+    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.1.2", type: MyComponent, selector: "my-component", inputs: { first: "first", last: "last", middle: "middle", size: "size" }, ngImport: i0, template: '<ng-content></ng-content>', isInline: true, changeDetection: i0.ChangeDetectionStrategy.OnPush });
 };
 MyComponent = __decorate([
     ProxyCmp({
-        inputs: ['first', 'last', 'middle']
+        inputs: ['first', 'last', 'middle', 'size']
     })
 ], MyComponent);
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.2", ngImport: i0, type: MyComponent, decorators: [{
@@ -96,7 +96,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.2", ngImpor
                     changeDetection: ChangeDetectionStrategy.OnPush,
                     template: '<ng-content></ng-content>',
                     // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-                    inputs: ['first', 'last', 'middle'],
+                    inputs: ['first', 'last', 'middle', 'size'],
                 }]
         }], ctorParameters: () => [{ type: i0.ChangeDetectorRef }, { type: i0.ElementRef }, { type: i0.NgZone }] });
 
