@@ -1,0 +1,1 @@
+import{p as r,g as t,b as a}from"./p-5f47872d.js";export{s as setNonce}from"./p-5f47872d.js";var o=()=>{const s=import.meta.url;const t={};if(s!==""){t.resourcesUrl=new URL(".",s).href}return r(t)};o().then((async s=>{await t();return a([],s)}));
