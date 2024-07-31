@@ -10,3 +10,12 @@ export declare class MyComponent {
 }
 export declare interface MyComponent extends Components.MyComponent {
 }
+export declare class WrapperMyComponent {
+    protected z: NgZone;
+    protected el: HTMLElement;
+    constructor(c: ChangeDetectorRef, r: ElementRef, z: NgZone);
+    static ɵfac: i0.ɵɵFactoryDeclaration<WrapperMyComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<WrapperMyComponent, "wrapper-my-component", never, {}, {}, never, ["*"], false, never>;
+}
+export declare interface WrapperMyComponent extends Components.WrapperMyComponent {
+}

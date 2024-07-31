@@ -100,14 +100,39 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.2", ngImpor
                     inputs: ['first', 'last', 'middle', 'size'],
                 }]
         }], ctorParameters: () => [{ type: i0.ChangeDetectorRef }, { type: i0.ElementRef }, { type: i0.NgZone }] });
+let WrapperMyComponent = class WrapperMyComponent {
+    z;
+    el;
+    constructor(c, r, z) {
+        this.z = z;
+        c.detach();
+        this.el = r.nativeElement;
+    }
+    static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.1.2", ngImport: i0, type: WrapperMyComponent, deps: [{ token: i0.ChangeDetectorRef }, { token: i0.ElementRef }, { token: i0.NgZone }], target: i0.ɵɵFactoryTarget.Component });
+    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.1.2", type: WrapperMyComponent, selector: "wrapper-my-component", ngImport: i0, template: '<ng-content></ng-content>', isInline: true, changeDetection: i0.ChangeDetectionStrategy.OnPush });
+};
+WrapperMyComponent = __decorate([
+    ProxyCmp({})
+], WrapperMyComponent);
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.2", ngImport: i0, type: WrapperMyComponent, decorators: [{
+            type: Component,
+            args: [{
+                    selector: 'wrapper-my-component',
+                    changeDetection: ChangeDetectionStrategy.OnPush,
+                    template: '<ng-content></ng-content>',
+                    // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+                    inputs: [],
+                }]
+        }], ctorParameters: () => [{ type: i0.ChangeDetectorRef }, { type: i0.ElementRef }, { type: i0.NgZone }] });
 
 const DIRECTIVES = [
-    MyComponent
+    MyComponent,
+    WrapperMyComponent
 ];
 
 class ComponentLibraryModule {
     static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.1.2", ngImport: i0, type: ComponentLibraryModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-    static ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "18.1.2", ngImport: i0, type: ComponentLibraryModule, declarations: [MyComponent], exports: [MyComponent] });
+    static ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "18.1.2", ngImport: i0, type: ComponentLibraryModule, declarations: [MyComponent, WrapperMyComponent], exports: [MyComponent, WrapperMyComponent] });
     static ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "18.1.2", ngImport: i0, type: ComponentLibraryModule });
 }
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.2", ngImport: i0, type: ComponentLibraryModule, decorators: [{
@@ -118,7 +143,6 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.2", ngImpor
                 }]
         }] });
 
-console.log('imported component-library.module.ts');
 class FoobarComponentLibraryModule {
     constructor() {
         defineCustomElements();
@@ -154,5 +178,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.2", ngImpor
  * Generated bundle index. Do not edit.
  */
 
-export { ComponentLibraryModule, ComponentLibraryService, DIRECTIVES, FoobarComponentLibraryModule, MyComponent };
+export { ComponentLibraryModule, ComponentLibraryService, DIRECTIVES, FoobarComponentLibraryModule, MyComponent, WrapperMyComponent };
 //# sourceMappingURL=component-library.mjs.map

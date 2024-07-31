@@ -4,7 +4,7 @@ import * as i0 from "@angular/core";
 import * as i1 from "./stencil-generated/components";
 export class ComponentLibraryModule {
     static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.1.2", ngImport: i0, type: ComponentLibraryModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-    static ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "18.1.2", ngImport: i0, type: ComponentLibraryModule, declarations: [i1.MyComponent], exports: [i1.MyComponent] });
+    static ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "18.1.2", ngImport: i0, type: ComponentLibraryModule, declarations: [i1.MyComponent, i1.WrapperMyComponent], exports: [i1.MyComponent, i1.WrapperMyComponent] });
     static ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "18.1.2", ngImport: i0, type: ComponentLibraryModule });
 }
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.2", ngImport: i0, type: ComponentLibraryModule, decorators: [{
