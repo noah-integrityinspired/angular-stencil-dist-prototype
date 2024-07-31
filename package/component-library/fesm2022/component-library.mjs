@@ -1,7 +1,8 @@
 import * as i0 from '@angular/core';
-import { Injectable, Component, ChangeDetectionStrategy, NgModule } from '@angular/core';
+import { Injectable, Component, ChangeDetectionStrategy, NgModule, APP_INITIALIZER } from '@angular/core';
 import { __decorate } from 'tslib';
 import { fromEvent } from 'rxjs';
+import { defineCustomElements } from 'stencil-library/loader';
 
 class ComponentLibraryService {
     constructor() { }
@@ -117,6 +118,34 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.2", ngImpor
                 }]
         }] });
 
+console.log('imported component-library.module.ts');
+class FoobarComponentLibraryModule {
+    constructor() {
+        defineCustomElements();
+    }
+    static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.1.2", ngImport: i0, type: FoobarComponentLibraryModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+    static ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "18.1.2", ngImport: i0, type: FoobarComponentLibraryModule });
+    static ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "18.1.2", ngImport: i0, type: FoobarComponentLibraryModule, providers: [
+            {
+                provide: APP_INITIALIZER,
+                useFactory: () => defineCustomElements,
+                multi: true
+            },
+        ] });
+}
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.2", ngImport: i0, type: FoobarComponentLibraryModule, decorators: [{
+            type: NgModule,
+            args: [{
+                    providers: [
+                        {
+                            provide: APP_INITIALIZER,
+                            useFactory: () => defineCustomElements,
+                            multi: true
+                        },
+                    ]
+                }]
+        }], ctorParameters: () => [] });
+
 /*
  * Public API Surface of component-library
  */
@@ -125,5 +154,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.2", ngImpor
  * Generated bundle index. Do not edit.
  */
 
-export { ComponentLibraryModule, ComponentLibraryService, DIRECTIVES, MyComponent };
+export { ComponentLibraryModule, ComponentLibraryService, DIRECTIVES, FoobarComponentLibraryModule, MyComponent };
 //# sourceMappingURL=component-library.mjs.map
