@@ -16,7 +16,7 @@ var patchBrowser = () => {
 
 patchBrowser().then(async (options) => {
   await globalScripts();
-  return bootstrapLazy([["my-component",[[1,"my-component",{"first":[1],"middle":[1],"last":[1],"size":[2]}]]],["wrapper-my-component",[[1,"wrapper-my-component"]]]], options);
+  return bootstrapLazy([["my-component",[[1,"my-component",{"first":[1],"middle":[1],"last":[1],"size":[2]}]]],["wrapper-my-component",[[1,"wrapper-my-component",{"size":[2]}]]]], options);
 });
 
 //# sourceMappingURL=stencil-library.js.map

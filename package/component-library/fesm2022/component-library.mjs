@@ -109,10 +109,12 @@ let WrapperMyComponent = class WrapperMyComponent {
         this.el = r.nativeElement;
     }
     static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.1.2", ngImport: i0, type: WrapperMyComponent, deps: [{ token: i0.ChangeDetectorRef }, { token: i0.ElementRef }, { token: i0.NgZone }], target: i0.ɵɵFactoryTarget.Component });
-    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.1.2", type: WrapperMyComponent, selector: "wrapper-my-component", ngImport: i0, template: '<ng-content></ng-content>', isInline: true, changeDetection: i0.ChangeDetectionStrategy.OnPush });
+    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.1.2", type: WrapperMyComponent, selector: "wrapper-my-component", inputs: { size: "size" }, ngImport: i0, template: '<ng-content></ng-content>', isInline: true, changeDetection: i0.ChangeDetectionStrategy.OnPush });
 };
 WrapperMyComponent = __decorate([
-    ProxyCmp({})
+    ProxyCmp({
+        inputs: ['size']
+    })
 ], WrapperMyComponent);
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.2", ngImport: i0, type: WrapperMyComponent, decorators: [{
             type: Component,
@@ -121,7 +123,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.2", ngImpor
                     changeDetection: ChangeDetectionStrategy.OnPush,
                     template: '<ng-content></ng-content>',
                     // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-                    inputs: [],
+                    inputs: ['size'],
                 }]
         }], ctorParameters: () => [{ type: i0.ChangeDetectorRef }, { type: i0.ElementRef }, { type: i0.NgZone }] });
 

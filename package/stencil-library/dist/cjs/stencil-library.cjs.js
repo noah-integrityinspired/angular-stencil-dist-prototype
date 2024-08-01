@@ -19,7 +19,7 @@ var patchBrowser = () => {
 
 patchBrowser().then(async (options) => {
   await appGlobals.globalScripts();
-  return index.bootstrapLazy([["my-component.cjs",[[1,"my-component",{"first":[1],"middle":[1],"last":[1],"size":[2]}]]],["wrapper-my-component.cjs",[[1,"wrapper-my-component"]]]], options);
+  return index.bootstrapLazy([["my-component.cjs",[[1,"my-component",{"first":[1],"middle":[1],"last":[1],"size":[2]}]]],["wrapper-my-component.cjs",[[1,"wrapper-my-component",{"size":[2]}]]]], options);
 });
 
 exports.setNonce = index.setNonce;

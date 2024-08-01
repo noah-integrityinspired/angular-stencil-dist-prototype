@@ -8,7 +8,7 @@ const appGlobals = require('./app-globals-3a1e7e63.js');
 const defineCustomElements = async (win, options) => {
   if (typeof window === 'undefined') return undefined;
   await appGlobals.globalScripts();
-  return index.bootstrapLazy([["my-component.cjs",[[1,"my-component",{"first":[1],"middle":[1],"last":[1],"size":[2]}]]],["wrapper-my-component.cjs",[[1,"wrapper-my-component"]]]], options);
+  return index.bootstrapLazy([["my-component.cjs",[[1,"my-component",{"first":[1],"middle":[1],"last":[1],"size":[2]}]]],["wrapper-my-component.cjs",[[1,"wrapper-my-component",{"size":[2]}]]]], options);
 };
 
 exports.setNonce = index.setNonce;

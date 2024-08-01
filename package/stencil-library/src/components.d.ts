@@ -25,6 +25,7 @@ export namespace Components {
         "size": number;
     }
     interface WrapperMyComponent {
+        "size": number;
     }
 }
 declare global {
@@ -65,6 +66,7 @@ declare namespace LocalJSX {
         "size"?: number;
     }
     interface WrapperMyComponent {
+        "size"?: number;
     }
     interface IntrinsicElements {
         "my-component": MyComponent;

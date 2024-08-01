@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import {Component, h, Prop} from '@stencil/core';
 
 @Component({
   tag: 'wrapper-my-component',
@@ -6,11 +6,12 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class WrapperMyComponent {
+  @Prop() size: number;
   render() {
     return (
       <div>
         <h1>Wrapper My Component</h1>
-        <my-component first="hello" last="world" size={15}></my-component>
+        <my-component first="hello" last="world" size={this.size}></my-component>
       </div>
     );
   }

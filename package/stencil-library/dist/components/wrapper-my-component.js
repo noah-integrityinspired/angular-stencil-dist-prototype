@@ -9,12 +9,15 @@ const WrapperMyComponent$1 = /*@__PURE__*/ proxyCustomElement(class WrapperMyCom
         super();
         this.__registerHost();
         this.__attachShadow();
+        this.size = undefined;
     }
     render() {
-        return (h("div", { key: 'f365e304c08a84fe5cc0283ff7e107b8783e925f' }, h("h1", { key: 'c5bf1ebb78b79931ddec08ce19e66aa07b9619bb' }, "Wrapper My Component"), h("my-component", { key: '2a0bb4893fd304669acf743550e9e82708cab461', first: "hello", last: "world", size: 15 })));
+        return (h("div", { key: '94b961a028951a0233e2806243b86350f5c7df32' }, h("h1", { key: 'c30d203c5969c4e44806926ff987c11fcd2175d4' }, "Wrapper My Component"), h("my-component", { key: '3511a8dfc8274d6e7ab9de427ca8dbe8ade063f8', first: "hello", last: "world", size: this.size })));
     }
     static get style() { return WrapperMyComponentStyle0; }
-}, [1, "wrapper-my-component"]);
+}, [1, "wrapper-my-component", {
+        "size": [2]
+    }]);
 function defineCustomElement$1() {
     if (typeof customElements === "undefined") {
         return;
