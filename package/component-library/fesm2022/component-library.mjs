@@ -78,7 +78,6 @@ let MyComponent = class MyComponent {
     z;
     el;
     constructor(c, r, z) {
-
         this.z = z;
         c.detach();
         this.el = r.nativeElement;
@@ -105,7 +104,6 @@ let WrapperMyComponent = class WrapperMyComponent {
     z;
     el;
     constructor(c, r, z) {
-
         this.z = z;
         c.detach();
         this.el = r.nativeElement;
